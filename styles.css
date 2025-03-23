@@ -1,0 +1,67 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header image styling (if you want to add a banner) */
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Index page */
+#indexPage {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Catalog page styling */
+#catalogPage {
+    padding: 20px;
+    background-color: #222;
+}
+
+#catalogPage h2 {
+    font-size: 32px;
+    color: #e60000;
+}
+
+#catalogPage .game-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#catalogPage .game-entry img {
+    width: 100px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+#catalogPage p {
+    font-size: 18px;
+}
+
+/* Button styling */
+#button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#button-container button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#button-container button:hover {
+    background-color: #ff3333;
+}

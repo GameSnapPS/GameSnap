@@ -1,0 +1,26 @@
+window.onload = function() {
+    console.log("Page has loaded successfully!");
+};
+
+const discountCodes = ["SAVE10", "DISCOUNT20", "PLAYSTATION25", "GAMEFAN30"];
+
+function changePageContent() {
+    alert("Button clicked!");  // This will show an alert when the button is clicked
+
+    // Show discount message
+    const messageElement = document.getElementById("message");
+    messageElement.innerHTML = "Here's a special discount just for you!";
+
+    const randomCode = discountCodes[Math.floor(Math.random() * discountCodes.length)];
+    
+    const codeElement = document.getElementById("discount-code");
+    codeElement.innerHTML = "Use code: " + randomCode;
+
+    document.body.style.backgroundColor = "red";
+
+    // Show the catalog
+    const catalog = document.getElementById("catalog");
+    catalog.style.display = "block";  // Reveal the catalog
+}
+
+document.getElementById("get-discount-button").onclick = changePageContent;

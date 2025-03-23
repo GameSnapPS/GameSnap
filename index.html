@@ -21,43 +21,8 @@
             color: #ff0000;
         }
 
-        .button-container {
-            margin-top: 40px;
-        }
-
-        #get-discount-button {
-            background-color: #ff0000;
-            color: #ffffff;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #get-discount-button:hover {
-            background-color: #cc0000;
-        }
-
-        .message-container {
-            margin-top: 30px;
-        }
-
-        #message {
-            font-size: 1.5em;
-            color: #ffffff;
-        }
-
-        #discount-code {
-            font-size: 1.5em;
-            color: #ff0000;
-            margin-top: 10px;
-        }
-
         /* Catalog styling */
         #catalog {
-            display: none;
             margin-top: 40px;
             padding: 20px;
             background-color: #222222;
@@ -100,18 +65,7 @@
     <h1>Welcome to GameSnap!</h1>
     <p>Get the best discounts on PlayStation games.</p>
 
-    <!-- Button to get discount -->
-    <div class="button-container">
-        <button id="get-discount-button">Get Your Discount</button>
-    </div>
-
-    <!-- Discount Message & Code Display -->
-    <div class="message-container">
-        <p id="message"></p>
-        <p id="discount-code"></p>
-    </div>
-
-    <!-- Catalog Section (Initially Hidden) -->
+    <!-- Catalog Section (Directly Visible) -->
     <div id="catalog">
         <h2>Game Catalog</h2>
         <div class="game-item">
@@ -130,8 +84,6 @@
         </div>
         <!-- Add more games here as needed -->
     </div>
-
-    <script src="script.js"></script>
 
 </body>
 </html>

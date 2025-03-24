@@ -6,84 +6,154 @@
     <title>GameSnap - Get Your Discount</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Body Styling */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #000000;
             color: #ffffff;
-            text-align: center;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Center content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin-top: 20px;
             color: #ff0000;
         }
 
-        /* Catalog styling */
+        p {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+
+        /* Catalog Section Styling */
         #catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
             margin-top: 40px;
-            padding: 20px;
+            padding: 30px;
             background-color: #222222;
-            color: #ffffff;
-            text-align: left;
             border-radius: 10px;
         }
 
         .game-item {
-            display: flex;
-            margin-bottom: 20px;
-            align-items: center;
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .game-item img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
-        .game-item .game-info {
-            display: flex;
-            flex-direction: column;
+        .game-info {
+            margin-top: 15px;
         }
 
-        .game-item .game-info h3 {
-            font-size: 1.5em;
+        .game-info h3 {
+            font-size: 1.6em;
             color: #ff0000;
-            margin: 0;
+            margin-bottom: 10px;
         }
 
-        .game-item .game-info p {
+        .game-info p {
             font-size: 1em;
-            margin: 5px 0;
+            color: #d0d0d0;
+            margin-bottom: 15px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .game-info h3 {
+                font-size: 1.4em;
+            }
+
+            .game-item {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to GameSnap!</h1>
-    <p>Get the best discounts on PlayStation games.</p>
+    <div class="container">
+        <h1>Welcome to GameSnap!</h1>
+        <p>Get the best discounts on PlayStation games.</p>
 
-    <!-- Catalog Section (Directly Visible) -->
-    <div id="catalog">
-        <h2>Game Catalog</h2>
-        <div class="game-item">
-            <img src="game1.jpg" alt="Game 1">
-            <div class="game-info">
-                <h3>Game 1 Title</h3>
-                <p>Game 1 description goes here.</p>
+        <!-- Catalog Section (Directly Visible) -->
+        <div id="catalog">
+            <!-- Red Dead Redemption 1 -->
+            <div class="game-item">
+                <img src="https://m.media-amazon.com/images/I/8148UPOcnLL.jpg" alt="Red Dead Redemption 1">
+                <div class="game-info">
+                    <h3>Red Dead Redemption 1</h3>
+                    <p>"Red Dead Redemption" follows former outlaw John Marston as he's forced by the government to hunt down his former gang members in exchange for his family's safety, set against the backdrop of the declining American Old West in 1911.</p>
+                </div>
+            </div>
+
+            <!-- Red Dead Redemption 2 -->
+            <div class="game-item">
+                <img src="https://m.media-amazon.com/images/I/81dKP+iFloL.jpg" alt="Red Dead Redemption 2">
+                <div class="game-info">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>The story is set in a fictionalized representation of the United States in 1899 and follows the exploits of Arthur Morgan, an outlaw and member of the Van der Linde gang, who must deal with the decline of the Wild West while attempting to survive against government forces, rival gangs, and other adversaries.</p>
+                </div>
+            </div>
+
+            <!-- EA FC 25 -->
+            <div class="game-item">
+                <img src="https://m.media-amazon.com/images/I/81mm+VudgaL.jpg" alt="EA FC 25">
+                <div class="game-info">
+                    <h3>EA FC 25</h3>
+                    <p>EA Sports FC 25 is the next chapter in EA's football video game franchise, offering more exciting matches, teams, and real-life players. Immerse yourself in the world of football with enhanced gameplay and realism.</p>
+                </div>
+            </div>
+
+            <!-- Call of Duty: Modern Warfare -->
+            <div class="game-item">
+                <img src="https://m.media-amazon.com/images/I/71PE2yfSgzL._AC_UF894,1000_QL80_.jpg" alt="Call of Duty: Modern Warfare">
+                <div class="game-info">
+                    <h3>Call of Duty: Modern Warfare</h3>
+                    <p>Modern Warfare is a reboot of the iconic first-person shooter series, offering thrilling single-player campaigns and competitive multiplayer modes. Join elite soldiers and experience intense combat.</p>
+                </div>
+            </div>
+
+            <!-- Grand Theft Auto V -->
+            <div class="game-item">
+                <img src="https://m.media-amazon.com/images/I/81W+fYqjU0L.jpg" alt="Grand Theft Auto V">
+                <div class="game-info">
+                    <h3>Grand Theft Auto V</h3>
+                    <p>Grand Theft Auto V lets you explore the vast open world of Los Santos. Play as three criminals with different stories, and dive into action, crime, and adventure in the heart of a fictionalized Los Angeles.</p>
+                </div>
             </div>
         </div>
-        <div class="game-item">
-            <img src="game2.jpg" alt="Game 2">
-            <div class="game-info">
-                <h3>Game 2 Title</h3>
-                <p>Game 2 description goes here.</p>
-            </div>
-        </div>
-        <!-- Add more games here as needed -->
     </div>
 
 </body>
 </html>
+
+
